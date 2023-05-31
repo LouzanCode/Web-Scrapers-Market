@@ -1,0 +1,60 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}blackwidow{% endblock %}
+{% block content %}
+
+
+<main>
+
+  <section class="py-5 text-center container" id="main-banner">
+    <div class="row py-lg-3" >
+      <div class="col-lg-6 col-md-8 mx-auto">
+        {% if user.is_authenticated %}
+        <h1 class="h1 fw-bold">Bienvenido, {{user.username}}.</h1>
+        {% else %}
+        <h1 class="h1 fw-bold">Automatízate, optimiza tu tiempo.</h1>
+        <p class="lead text-muted">Házte con las herramientas para realizar tareas de cómputo repetitivas.</p>
+        <p>
+          <a href="/login" class="btn btn-primary my-2">Iniciar sesión</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="pb-3 h5">Destacado</div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+
+        {% for product in products %}
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="img-fluid" alt="Responsive image" src="{{product.image.url}}">
+            <div class="card-body">
+              <p class="card-text">
+                <a class="text-dark fw-bold" href="{{product.get_absolute_url}}">{{product.title}}</a>
+              </p>
+              <p class="card-text">
+                <span>Categoría:</span>
+                <a class="text-dark fw-bold" href="{{product.category.get_absolute_url}}">{{product.category|title}}</a>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{product.price}} $</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+
+</main>
+
+{% endblock %}
