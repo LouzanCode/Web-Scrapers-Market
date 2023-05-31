@@ -16,30 +16,49 @@ en este archivo, se definen las clases u objetos de los elementos de la base de 
 Django nos ofrece unos models de usuario predeterminados que más adelante mostraremos. Una vez creado los models, para migrarlos a la base de datos se utilizará los comandos migrate y makemigrations, ejecutamos la aplicación e introducimos en la url de la web '/admin' (habrá que crear el superuser previamente),
 esto es la gran ventaja de django, una interfaz para el admin donde se puede gestionar la base de datos muy cómodamente.
  
-![admin_iniciar]()
+![admin_iniciar](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/admin_iniciar.PNG)
+![admin_panel](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/admin_panel.PNG)
+![store](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/store_products.PNG)
+![products](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/porducto_admin.PNG)
 
 Una vez llegados aquí, podemos añadir, eliminar y editar cada elemento. En el caso de los usuarios se puede añadir o quitar permisos de una manera muy práctica.
 
 APLICACIÓN:
 Página principal:
- 
+
+![main](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/menu_principal.PNG)
  
 Hacemos click en iniciar sesíon que se encuentra el panel principal y nos lleva al login.
- 
-Clicamos en registrarse aquí, y registramos un usuario que a continuacíon mostraremos en la base de datos.
+
+![login](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/login.PNG)
+
+Clicamos en registrarse aquí o en registrarse al lado del carrito, y registramos un usuario que a continuacíon mostraremos en la base de datos.
+
+![registrarse](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/register.PNG)
  
 Al clicar registrar nos redirecciona a la página principal, ahora volvamos a la interfaz de admin y vemos como queda registrado el nuevo usuario.
+
+![admin_users](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/admin_users.PNG)
  
 Iniciamos sesíon con el usuario recién creado y volvemos a la página principal, en este caso el panel principal cambia ya que el usuario ha iniciado sesíon.
+
+![log](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/menu_log.PNG)
  
 Vamos ahora con las categorías, donde se muestran las categorías de manera dinamica en el template.
+
+
+![categories](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/categories.PNG)
  
 Clicamos en una de ellas y nos lleva al template de lista de categoría.
  
 Ahora, veamos la ´pagina del producto, hacemos click en uno de los productos.
  
+![producto](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/producto.PNG)
 
 Añadimos el producto al carrito y clicamos en carrito en la parte superior a la derecha para ver el template de carrito.
+
+
+![carrito](https://github.com/LouzanCode/Web-Scrapers-Market/blob/main/imag/carrito.PNG)
  
 En el caso de la aplicación del carrito, no usamos el models.py sino que creamos un archivo carrito.py donde declaramos la clase carrito. No queremos registrar el carrito en la base de datos, sino crear una sesíon del usuario cada vez que abra el carrito. En los templates utilizamos AJAX (Asynchronous JavaScript and XML), AJAX es el arte de intercambiar datos con un servidor y actualizar partes de una página web, sin recargar toda la página.
 
