@@ -78,7 +78,7 @@ Respecto la media, indicamos en el settings.py una MEDIA_URL y MEDIA_ROOT, y lo 
 Para instalar los componentes vamos al terminal e introducimos pip install -r requirements.txt.
 
 CONCLUSÓN:
-El proyecto al principio era muy ambicioso y quise añadir temario bastante lejos de mi conocimiento, lo volví a empezar y utilicé todas las ventajas por default para enseñar mejor las capacidades del framework. Lo más importante del proyecto son los scrapers ya que lo he ido moldeano y son muy sostenibles.
+Utilicé todas las ventajas por default para enseñar mejor las capacidades del framework, lo más importante del proyecto son los scrapers ya que lo he ido moldeano y son muy sostenibles.
 Cosas a mejorar, el diseño se puede mejorar mucho, crear unos modelos de usuario que aumenten la seguridad ,añadir app de ordenes y pagos, añadir permisos de usuario que puedan subir sus productos al sitioweb y añadir blog o foro.
 
  
